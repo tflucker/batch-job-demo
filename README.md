@@ -1,15 +1,28 @@
 # batch-job-demo
 Example of how to use use a batch processing with spring and java 17 which was created using the following [tutorial](https://spring.io/guides/gs/batch-processing).
 
+## TODO: 
+- Change the project to do something outside of the tutorial: BankAccount Transactions
+  - change person to BankAccountBalance
+  - modify csv file to show a list of transaction starting with the initial deposit and a small history of transactions / additional deposits
+  - create two tables (Account, Transactions)
+  - save individual transactions in its own table
+  - after job completes, calculate the current balance then save it in the Account table, print final balance
 
-How to run locally: 
+## Extra TODO: 
+- Play with GitHub actions, maybe try to implement a code scanner, maven builder, or something else
+- Create a GitHub project to track work
+- Use GitHub tags and releases to organize work
+
+
+##How to run locally: 
 
 1. Verify that the `sample-data.csv` file in the `src/main/resources/` folder is present and has comma separated values. Each line should have two values (first_name, last_name)
 2. Run the `mvn clean package` command to generate a jar
 3. Run the `java -jar target/batch-job-demo-0.0.1-SNAPSHOT.jar` to run the file 
 
 
-#### Example Output:
+### Example Output:
 
 ```
 2025-05-09T19:44:20.711-04:00  INFO 38292 --- [batch-job-demo] [           main] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=importUserJob]] launched with the following parameters: [{}]
