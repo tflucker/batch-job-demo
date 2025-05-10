@@ -1,4 +1,4 @@
-package com.tim.batch_job_demo;
+package com.tim.batch.job.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BatchJobDemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BatchJobDemoApplication.class, args);
+		System.exit(SpringApplication.exit(SpringApplication.run(BatchJobDemoApplication.class, args)));
 	}
 
 }
