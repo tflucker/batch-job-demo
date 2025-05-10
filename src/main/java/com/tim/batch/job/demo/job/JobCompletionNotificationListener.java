@@ -11,6 +11,9 @@ import org.springframework.stereotype.Component;
 
 import com.tim.batch.job.demo.model.Person;
 
+/**
+ * Custom component that is called once the step function completes.
+ */
 @Component
 public class JobCompletionNotificationListener implements JobExecutionListener {
 
@@ -18,10 +21,19 @@ public class JobCompletionNotificationListener implements JobExecutionListener {
 
 	private final JdbcTemplate template;
 
+	/**
+	 * Custom constructor using the jdbcTemplate.
+	 * 
+	 * @param jdbcTemplate
+	 */
 	public JobCompletionNotificationListener(JdbcTemplate jdbcTemplate) {
 		this.template = jdbcTemplate;
 	}
 
+	/**
+	 * Checks if the job was completed successfully, and if it is then query the
+	 * database and print the values from each record.
+	 */
 	@Override
 	public void afterJob(JobExecution jobExecution) {
 		if (jobExecution.getStatus() == BatchStatus.COMPLETED) {
