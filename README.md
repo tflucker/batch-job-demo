@@ -15,7 +15,7 @@ Example of how to use use a batch processing with spring and java 17 which was c
 - Use GitHub tags and releases to organize work
 
 
-##How to run locally: 
+## How to run locally: 
 
 1. Verify that the `sample-data.csv` file in the `src/main/resources/` folder is present and has comma separated values. Each line should have two values (first_name, last_name)
 2. Run the `mvn clean package` command to generate a jar
@@ -23,7 +23,6 @@ Example of how to use use a batch processing with spring and java 17 which was c
 
 
 ### Example Output:
-
 ```
 2025-05-09T19:44:20.711-04:00  INFO 38292 --- [batch-job-demo] [           main] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=importUserJob]] launched with the following parameters: [{}]
 2025-05-09T19:44:20.737-04:00  INFO 38292 --- [batch-job-demo] [           main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [step1]
